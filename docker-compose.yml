@@ -39,7 +39,6 @@ services:
   restaurants-service:
     container_name: restaurants-service
     image: microservices-workshop:dev
-    image: microservices-workshop/restaurants-service:dev
     restart: on-failure
     volumes:
       - ./restaurants-service:/app/src
