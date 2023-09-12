@@ -13,6 +13,10 @@ const orderRequester = new cote.Requester({ name: 'order requester', key: 'order
 
 const deliveryRequester = new cote.Requester({ name: 'delivery requester', key: 'deliveries' })
 
+app.get('/', async (req, res) => {
+    res.send({"status":"ready"});
+})
+
 app.get('/restaurants', async (req, res) => {
     const restaurants = await restaurantsRequester.send({ type: 'list' })
     res.send(restaurants);
