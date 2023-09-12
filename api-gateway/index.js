@@ -13,7 +13,7 @@ const orderRequester = new cote.Requester({ name: 'order requester', key: 'order
 
 const deliveryRequester = new cote.Requester({ name: 'delivery requester', key: 'deliveries' })
 
-app.get('/', async (req, res) => {
+app.get('/', (req, res) => {
     res.send({"status":"ready"});
 })
 
